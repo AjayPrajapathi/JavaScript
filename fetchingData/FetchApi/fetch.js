@@ -101,3 +101,28 @@ async function sameTimeTryCatch() {
   
   sameTimeTryCatch();
   
+//   async function sameTimeTryCatch() {
+//     try {
+//       const [fet1, fet2] = await Promise.all([
+//         fetch("https://jsonplaceholder.typicode.com/users"),
+//         fetch("https://jsonplaceholder.typicode.com/posts")
+//       ]);
+  
+//       if (!fet1.ok) {
+//         throw new Error(`Failed to fetch users: ${fet1.status} ${fet1.statusText}`);
+//       }
+//       if (!fet2.ok) {
+//         throw new Error(`Failed to fetch posts: ${fet2.status} ${fet2.statusText}`);
+//       }
+  
+//       const data1 = await fet1.json();
+//       const data2 = await fet2.json();
+  
+//       console.log(data1);
+//       console.log(data2);
+//     } catch (error) {
+//       console.error("An error occurred:", error.message);
+//     }
+//   }
+  
+//   sameTimeTryCatch(
